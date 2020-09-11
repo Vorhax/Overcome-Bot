@@ -7,7 +7,7 @@ const calcul
 bot.on('message', function (message) {
   if (message.content == '!tutoriel') {
     calcul=1+2
-    message.reply($("Vive les tutos"+calcul);
+    message.channel.send('Vive les tutos'+ calcul);
   }
 });
 
