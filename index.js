@@ -10,9 +10,9 @@ bot.on('message', function (message) {
 });
 
 bot.on('message', function (message) {
-  if (message.content == '.tempstrajet') {
+  if (message.content.startswith('.tempstrajet') {
       const args = message.content.slice(message.lenght).split(/ +/);
-        message.channel.send(args[1]);
+        message.channel.send( $args[1] );
   }
 });
 
