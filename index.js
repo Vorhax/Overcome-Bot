@@ -1,17 +1,17 @@
+
+
 const Discord = require('discord.js');
-var bot = new Discord.Client();
+const bot = new Discord.Client({DisableEveryone: true});
 bot.on('message', function (message) {
   if (message.content == '!tutoriel') {
-    message.reply("Vive les tutos"); 
+    message.reply("Vive les tutos");
   }
 });
 
 
 
 
-
-
-bot.login("NzUwNzI3NzEwMTIwMzQ1NjAw.X0-vqQ.DUKhT4B_dGV9lNWAtpIFUVx6Bcw");
+bot.login(process.env.token);
 
 
 
