@@ -2,9 +2,12 @@
 
 const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
+const calcul
+
 bot.on('message', function (message) {
   if (message.content == '!tutoriel') {
-    message.reply("Vive les tutos");
+    calcul=1+2
+    message.reply($("Vive les tutos"+calcul);
   }
 });
 
