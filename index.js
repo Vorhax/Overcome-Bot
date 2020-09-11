@@ -9,7 +9,12 @@ bot.on('message', function (message) {
   }
 });
 
-
+bot.on('message', function (message) {
+  if (message.content == '.tempstrajet') {
+      const args = message.content.slice(message.lenght).split(/ +/);
+        message.channel.send(args[1]);
+  }
+});
 
 
 bot.login(process.env.Token);
