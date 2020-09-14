@@ -34,7 +34,7 @@ bot.on('ready',async() => {
 
     const args = message.content.slice(1).split(/ +/);
     const command = args.shift().toLowerCase();
-    message.reply(bot.commands.name[0]);
+    message.reply(bot.commands[0].name);
     if (!bot.commands.has(command)) return;
 
     try {
