@@ -17,7 +17,7 @@ bot.on('message', async (msg) => {
               //retour = args[1]
               msg.channel.send(cmd)
           }
-  }).listen(process.env.PORT || 5000);
+  });
 
 bot.login(process.env.Token);
 
