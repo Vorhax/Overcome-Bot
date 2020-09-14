@@ -12,12 +12,8 @@ bot.on('message', function (message) {
   if (message.content.startswith('.tempstrajet') && !msg.author.bot){
               args = message.content.split()
               message.channel.send(args[1])
-
-  };
-);
-
-
-
+            }
+  });
 
 bot.login(process.env.Token);
 
