@@ -1,7 +1,8 @@
 module.exports.run = (bot, msg, args) => {
 
     if(args.length > 2 || args.length < 1) return msg.channel.send("Il n'y pas assez d'argument \nVous devez donner au moins un nombre de kilometre par default la vitesse utilisé sera 30.000km/h")
-    if(isNaN(args[0])||isNaN(args[1])) return msg.channel.send("Le(s) argument(s) est(sont) incorrect(s) merci de renseigner des chiffres.")
+    if(args.length==1 && (isNaN(args[0]))) return msg.channel.send("L'argument est incorrect merci de renseigner un chiffre.")
+    if(args.length==2 && (isNaN(args[0])||isNaN(args[1]))) return msg.channel.send("Les arguments sont incorrects merci de renseigner des chiffres.")
 
     if(args.length == 2){
       var vitesse =args[1]}
