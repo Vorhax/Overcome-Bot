@@ -8,10 +8,11 @@ bot.on('ready',async() => {
     bot.user.setActivity('Bot De calcule Overcome');
 });
 
-bot.on('message', function (message) {
-  if (message.content.startswith('.tempstrajet') && !msg.author.bot){
-              args = message.content.split()
-              message.channel.send(args[1])
+bot.on('message', async (msg)=> {
+  if (msg.content.startswith('.tempstrajet') && !msg.author.bot){
+              args = msg.content.split()
+              retour = args[1]
+              msg.channel.send(retour)
             }
   });
 
