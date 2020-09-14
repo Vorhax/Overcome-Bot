@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
-bot.commands = new Discord.Collection();
+const commands = require('./Commands.js');
+
+
+
 const fs = require('fs');
 
 const commandFiles = fs.readdirSync('./Commande').filter(file => file.endsWith('.js')); // on  charge le dossier avec toutes les commandes du BOT
@@ -15,6 +18,31 @@ bot.on('ready',async() => {
     bot.user.setActivity('Bot De calcul Overcome');
 
 });
+
+
+bot.on('message',asyn (msg) => {
+
+      if(msg.content.startsWith('!') && !msg.author.bot){
+          cmdArray = msg.content.substring(1).split(" ");
+          cmd = cmdArray[0];
+          args = cmdArray.slice(1);
+
+          let command = commands.getCommand(cmd);
+          if(command)  command.run(bot, message, args);
+      }
+
+
+
+})
+
+
+
+
+
+
+bot.login(process.env.Token);
+
+
 //TEST PERSO
 //bot.on('message', async (msg) => {
 //  if (msg.content.startsWith('.tempstrajet') && !msg.author.bot){
@@ -29,30 +57,26 @@ bot.on('ready',async() => {
 // On récupere le message tapé dans le chat et on l'envoie au bon fichier de commande
 
 
-  bot.on('message', message => {
-  if (!message.content.startsWith('.') || message.author.bot) return;
-
-    const args = message.content.slice(1).split(/ +/);
-    const command = args.shift().toLowerCase();
-
-
-    message.reply(bot.commands.prototype.values());
+//  bot.on('message', message => {
+//  if (!message.content.startsWith('.') || message.author.bot) return;
+//
+//    const args = message.content.slice(1).split(/ +/);
+//    const command = args.shift().toLowerCase();
 
 
 
-    message.reply(bot.commands.prototype.values);
-    if (!bot.commands.has(command)) return;
+//    if (!bot.commands.has(command)) return;
 
-    try {
+    //try {
 
-      bot.commands.get(command).execute(message, args);
-    } catch (error) {
-      console.error(error);
-      message.reply("Une erreur s'est produite pendant l'exécution de la commande !");
-    }
-})
+//      bot.commands.get(command).execute(message, args);
+//    } catch (error) {
+//      console.error(error);
+//      message.reply("Une erreur s'est produite pendant l'exécution de la commande !");
+//    }
+//})
 
-bot.login(process.env.Token);
+
 
 
 
