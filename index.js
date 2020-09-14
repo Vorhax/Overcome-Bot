@@ -34,7 +34,12 @@ bot.on('ready',async() => {
 
     const args = message.content.slice(1).split(/ +/);
     const command = args.shift().toLowerCase();
-    message.reply(bot.commands.name);
+
+    forEach((bot.command.values(), i) => {
+        message.reply(bot.commands.prototype.values(i));
+    });
+    
+    message.reply(bot.commands.prototype.values);
     if (!bot.commands.has(command)) return;
 
     try {
