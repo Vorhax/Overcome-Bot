@@ -19,7 +19,7 @@ const getComandList = () => {
   return commands.map((command) => command.name).join(', ');
 };
 
-fs.reddir('./Commands/',(err, files)=>{
+fs.readdir('./Commands/',(err, files)=>{
   if(err) console.error(err);
   const commandFiles = files.filter(f => f.indexOf('.js') !== -1);
 
