@@ -9,12 +9,12 @@ bot.on('ready',async() => {
 });
 
 bot.on('message', async (msg)=> {
-  if (msg.content.startswith(".tempstrajet") && !msg.author.bot){
+//  if (msg.content.startswith(".tempstrajet") && !msg.author.bot){
               args = msg.content.substring(1).split(" ")
               cmd = args[0]
               //retour = args[1]
               msg.channel.send(cmd)
-            }
+  //          }
   });
 
 bot.login(process.env.Token);
