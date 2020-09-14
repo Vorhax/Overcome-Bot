@@ -41,7 +41,7 @@ module.exports.run = (bot, msg, args) => {
             retour+=secondes.toFixed(0)+'s';
        }
 
-      var contenu =   `>>> **temps passé :** ${retour} `
+      var contenu =   `>>> **temps de trajet :** ${retour} `
 
 
 
