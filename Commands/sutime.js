@@ -41,7 +41,7 @@ module.exports.run = (bot, msg, args) => {
             retour+=secondes.toFixed(0)+'s';
        }
 
-      var contenu =   `>>> **temps de trajet :** ${retour} \nDistance : ${args[0]}SU \nVitesse : ${vitesse}km\h`
+      var contenu =   `>>> **temps de trajet :** ${retour} \nDistance : ${args[0]}SU \nVitesse : ${vitesse}km/h`
 
 
 
