@@ -12,7 +12,7 @@ const commandFactory = (command) => {
 };
 
 const getCommand = (name) => {
-    return command.find((command) => command.name === name);
+    return commands.find((command) => command.name === name);
 };
 
 const getCommandList = () => {
