@@ -10,7 +10,7 @@ bot.on('ready',async() => {
 
 bot.on('message', async (msg)=> {
   if (msg.content.startswith('.tempstrajet') && !msg.author.bot){
-              args = msg.content.split()
+              args = msg.content.split(" ")
               retour = args[1]
               msg.channel.send(retour)
             }
