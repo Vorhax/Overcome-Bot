@@ -28,7 +28,7 @@ module.exports.run = (bot, msg, args) => {
        }
        if(secondes>0)
        {
-            retour+=secondes+'s';
+            retour+=secondes.toFixed(0)+'s';
        }
 
       var contenu =   `temps passé : ${retour} `
