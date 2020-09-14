@@ -34,11 +34,11 @@ bot.on('ready',async() => {
 
     const args = message.content.slice(1).split(/ +/);
     const command = args.shift().toLowerCase();
-
+    message.reply(bot.commands.name[0]);
     if (!bot.commands.has(command)) return;
 
     try {
-      message.reply(command);
+
       bot.commands.get(command).execute(message, args);
     } catch (error) {
       console.error(error);
