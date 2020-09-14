@@ -1,7 +1,7 @@
 module.exports.run = (bot, msg, args) => {
-    if(args.length > 2 || args.length < 1) return msg.channel.send("Il n'y pas assez d'argument /n Vous devez donner au moins un nombre de kilometre par default la vitesse utilisé sera 30.000km/h")
+    if(args.length > 2 || args.length < 1) return msg.channel.send("Il n'y pas assez d'argument \n Vous devez donner au moins un nombre de kilometre par default la vitesse utilisé sera 30.000km/h")
     if(args.length == 1){
-      var secondes = args[0] / 30000
+      var secondes = args[0] / 30000 * 3600
       var retour='';
        if(secondes<0)
        {
@@ -30,8 +30,6 @@ module.exports.run = (bot, msg, args) => {
        {
             retour+=secondes+'s';
        }
-
-
 
       var contenu =   `temps passé : ${retour} `
     }
