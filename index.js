@@ -20,7 +20,7 @@ bot.on('ready',async() => {
 });
 
 
-bot.on('message',asyn (msg) => {
+bot.on('message',async (msg) => {
 
       if(msg.content.startsWith('!') && !msg.author.bot){
           cmdArray = msg.content.substring(1).split(" ");
@@ -29,16 +29,11 @@ bot.on('message',asyn (msg) => {
 
           let command = commands.getCommand(cmd);
           if(command)  command.run(bot, message, args);
-      }
+      };
 
 
 
-})
-
-
-
-
-
+});
 
 bot.login(process.env.Token);
 
