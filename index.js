@@ -7,9 +7,9 @@ bot.on('ready',async() => {
     console.log('Bot lancé');
     bot.user.setActivity('Bot De calcule Overcome');
 });
-//msg.content.startswith(".tempstrajet") && 
+//
 bot.on('message', async (msg) => {
-  if (!msg.author.bot){
+  if (msg.content.startswith('.tempstrajet') && !msg.author.bot){
               msg.channel.send('test')
               args = msg.content.substring(1).split(" ")
               cmd = args[0]
