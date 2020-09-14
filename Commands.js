@@ -15,7 +15,7 @@ const getCommand = (name) => {
     return command.find((command) => command.name === name);
 };
 
-const getComandList = () => {
+const getCommandList = () => {
   return commands.map((command) => command.name).join(', ');
 };
 
