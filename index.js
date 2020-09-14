@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js')); // on  charge le dossier avec toutes les commandes du BOT
+const commandFiles = fs.readdirSync('./Commande').filter(file => file.endsWith('.js')); // on  charge le dossier avec toutes les commandes du BOT
 for (const file of commandFiles) { // on  charge le dossier avec toutes les commandes du BOT
-  const command = require(`./commands/${file}`); // on  charge le dossier avec toutes les commandes du BOT
+  const command = require(`./Commande/${file}`); // on  charge le dossier avec toutes les commandes du BOT
   client.commands.set(command.name, command); // on  charge le dossier avec toutes les commandes du BOT
 } // on  charge le dossier avec toutes les commandes du BOT
 
