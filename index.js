@@ -9,7 +9,7 @@ bot.on('ready',async() => {
 });
 
 bot.on('message', async (msg)=> {
-  if (msg.content.startswith('.tempstrajet') && !msg.author.bot){
+  if (msg.content.startswith(".tempstrajet") && !msg.author.bot){
               args = msg.content.substring(1).split(" ")
               cmd = args[0]
               //retour = args[1]
