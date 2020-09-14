@@ -9,10 +9,10 @@ bot.on('ready',async() => {
 });
 //
 bot.on('message', async (msg) => {
-  if (msg.content.startsWith('.') && !msg.author.bot){
+  if (msg.content.startsWith('.tempstrajet') && !msg.author.bot){
               msg.channel.send('test')
               args = msg.content.substring(1).split(" ")
-              cmd = args[0]
+              cmd = args[1]
               //retour = args[1]
               msg.channel.send(cmd)
           }
