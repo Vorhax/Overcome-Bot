@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
+bot.commands = new Discord.Collection();
 const fs = require('fs');
 
 const commandFiles = fs.readdirSync('./Commande').filter(file => file.endsWith('.js')); // on  charge le dossier avec toutes les commandes du BOT
