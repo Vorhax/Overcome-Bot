@@ -9,7 +9,7 @@ bot.on('ready',async() => {
 });
 //
 bot.on('message', async (msg) => {
-  if (msg.content.startswith('.') && !msg.author.bot){
+  if (msg.content.startsWith('.') && !msg.author.bot){
               msg.channel.send('test')
               args = msg.content.substring(1).split(" ")
               cmd = args[0]
