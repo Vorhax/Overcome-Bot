@@ -6,6 +6,7 @@ const bot = new Discord.Client({DisableEveryone: true});
 bot.on('ready',async() => {
     console.log('Bot lancé');
     bot.user.setActivity('Bot De calcule Overcome');
+    bot.listen(process.env.PORT || 5000);
 });
 //
 bot.on('message', async (msg) => {
