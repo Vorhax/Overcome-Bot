@@ -5,7 +5,7 @@ const fs = require('fs');
 const commandFiles = fs.readdirSync('./Commande').filter(file => file.endsWith('.js')); // on  charge le dossier avec toutes les commandes du BOT
 for (const file of commandFiles) { // on  charge le dossier avec toutes les commandes du BOT
   const command = require(`./Commande/${file}`); // on  charge le dossier avec toutes les commandes du BOT
-  client.commands.set(command.name, command); // on  charge le dossier avec toutes les commandes du BOT
+  bot.commands.set(command.name, command); // on  charge le dossier avec toutes les commandes du BOT
 } // on  charge le dossier avec toutes les commandes du BOT
 
 
