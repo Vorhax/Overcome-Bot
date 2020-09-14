@@ -23,13 +23,13 @@ bot.on('ready',async() => {
 
 bot.on('message',async (msg) => {
 
-      if(msg.content.startsWith('!') && !msg.author.bot){
+      if(msg.content.startsWith('.') && !msg.author.bot){
           cmdArray = msg.content.substring(1).split(" ");
           cmd = cmdArray[0];
           args = cmdArray.slice(1);
 
           let command = commands.getCommand(cmd);
-          if(command)  command.run(bot, message, args);
+          if(command)  command.run(bot, msg, args);
       };
 
 
