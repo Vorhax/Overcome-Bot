@@ -8,8 +8,9 @@ bot.on('ready',async() => {
     bot.user.setActivity('Bot De calcule Overcome');
 });
 
-bot.on('message', async (msg)=> {
+bot.on('message', async (msg) => {
 //  if (msg.content.startswith(".tempstrajet") && !msg.author.bot){
+              msg.channel.send('test')
               args = msg.content.substring(1).split(" ")
               cmd = args[0]
               //retour = args[1]
