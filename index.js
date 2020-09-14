@@ -7,15 +7,15 @@ bot.on('ready',async() => {
     console.log('Bot lancé');
     bot.user.setActivity('Bot De calcule Overcome');
 });
-
+//msg.content.startswith(".tempstrajet") && 
 bot.on('message', async (msg) => {
-//  if (msg.content.startswith(".tempstrajet") && !msg.author.bot){
+  if (!msg.author.bot){
               msg.channel.send('test')
               args = msg.content.substring(1).split(" ")
               cmd = args[0]
               //retour = args[1]
               msg.channel.send(cmd)
-  //          }
+          }
   });
 
 bot.login(process.env.Token);
