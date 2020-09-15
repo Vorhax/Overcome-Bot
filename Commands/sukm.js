@@ -5,8 +5,8 @@ module.exports.run = (bot, msg, args) => {
   var su =args[0]
 
   var retour='';
-  var su =Math.floor(su*200);
-  retour+=su.toFixed(0)+' SU';
+  var su =su*200;
+  retour+=su.toFixed(0)+' Km';
 
 
   var contenu = `>>> **Distance :** ${retour}`

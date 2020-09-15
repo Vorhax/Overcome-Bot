@@ -5,7 +5,7 @@ module.exports.run = (bot, msg, args) => {
   var km =args[0]
 
   var retour='';
-  var su =Math.floor(km/200);
+  var su =km/200;
   retour+=su.toFixed(2)+' SU';
 
 
