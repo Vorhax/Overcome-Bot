@@ -3,7 +3,7 @@ const Discord = require ('discord.js');
 module.exports.run = async (bot,msg,args) => {
     let hEmbed = new Discord.MessageEmbed()
     .setColor('26a1d1')
-    .attachFiles(['./images/skyrim.png'])
+    .setImage('attachment://images/skyrim.png')
     .setTitle( 'Aide du bot')
     .setDescription('Je suis à votre service vous trouverez ci-dessous la liste des commandes possibles')
     .addField('=> .kmsu ', "Converti des kilomètre en SU \n Parametre d'entrée : **<distance en kilomètre>**\n")
