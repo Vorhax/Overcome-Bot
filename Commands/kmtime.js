@@ -1,3 +1,5 @@
+const Discord = require ('discord.js');
+
 module.exports.run = (bot, msg, args) => {
 
     if(args.length > 2 || args.length < 1) return msg.channel.send("Il n'y pas assez d'argument \nVous devez donner au moins un nombre de kilométre par default la vitesse utilisé sera 30.000km/h")
@@ -41,8 +43,18 @@ module.exports.run = (bot, msg, args) => {
             retour+=secondes.toFixed(0)+'s';
        }
 
-      var contenu =     `>>> **temps de trajet :** ${retour} \nDistance : ${args[0]}Km \nVitesse : ${vitesse}km/h`
+      var contenu =     `>>> **temps de trajet :** ${retour}`
 
+
+      let hEmbed = new Discord.MessageEmbed()
+      .setColor('26a1d1')
+      .setTitle(contenu)
+      .addField(`Distance retenue : `, ` ${args[0]} Km \n `)
+      .addField(`Vitesse retenue : `, ` ${vitesse} Km/h \n `)
+      .setFooter("Overcome vous souhaite une bonne journée")
+      .setTimestamp();
+
+      msg.channel.send(hEmbed);
 
 
 
