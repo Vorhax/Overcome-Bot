@@ -6,9 +6,9 @@ module.exports.run = (bot, msg, args) => {
 
     var distance = args[0];
     var poids = args[1];
-    var retour = distance * poids * 0.00025
+    var retour = Math.ceil(distance * poids * 0.00025)
 
-      var contenu =   `>>> **Consomation de  : ${retour.toFixed(0)+1} Warp Cells**\n__Distance__ : ${distance} SU \n__Poids__ :${poids} Tonnes`
+      var contenu =   `>>> **Consomation de  : ${retour.toFixed(0)} Warp Cells**\n__Distance__ : ${distance} SU \n__Poids__ :${poids} Tonnes`
 
 
 
