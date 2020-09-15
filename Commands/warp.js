@@ -1,3 +1,5 @@
+const Discord = require ('discord.js');
+
 module.exports.run = (bot, msg, args) => {
 
     if(args.length>2 || args.length<2) return msg.channel.send(">>> Les variable données ne sont pas correctes \nVous devez donner au moins __une distance__ en SU et __le poids__ en Tonne du vaisseau")
