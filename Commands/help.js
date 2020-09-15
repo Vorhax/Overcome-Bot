@@ -3,7 +3,8 @@ const Discord = require ('discord.js');
 module.exports.run = async (bot,msg,args) => {
     let hEmbed = new Discord.MessageEmbed()
     .setColor('26a1d1')
-    .setTitle(files: ["./images/skyrim.png"], 'Aide du bot')
+    .attachFiles(['./images/skyrim.png'])
+    .setTitle( 'Aide du bot')
     .setDescription('Je suis à votre service vous trouverez ci-dessous la liste des commandes possibles')
     .addField('=> .kmsu ', "Converti des kilomètre en SU \n Parametre d'entrée : **<distance en kilomètre>**\n")
     .addField('=> .kmtime ', "Donne le temps de trajet pour une distance donnée à une vitesse donnée \n Parametre d'entrée : **<Distance en kilomètre>** - **(<Vitesse en Km/h>)** (si pas de valeur 30.000km/h)\n")
