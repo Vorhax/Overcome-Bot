@@ -43,7 +43,7 @@ module.exports.run = (bot, msg, args) => {
             retour+=secondes.toFixed(0)+'s';
        }
 
-      var contenu =     `>>> **temps de trajet :** ${retour}`
+      var contenu = `**temps de trajet :** ${retour}`
 
 
       let hEmbed = new Discord.MessageEmbed()
@@ -58,7 +58,7 @@ module.exports.run = (bot, msg, args) => {
 
 
 
-    msg.channel.send(contenu)
+    //msg.channel.send(contenu) ancienne métodhe d'envoie du message
   }
 
 module.exports.help =  {

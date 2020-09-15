@@ -12,7 +12,7 @@ module.exports.run = (bot, msg, args) => {
   retour+=su.toFixed(2)+' SU';
 
 
-  var contenu = `** ${args[0]} km donne Distance : ${retour}**`
+  var contenu = `** ${args[0]} km donne une distance de ${retour}**`
 
 
   let hEmbed = new Discord.MessageEmbed()

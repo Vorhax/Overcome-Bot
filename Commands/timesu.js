@@ -1,3 +1,5 @@
+const Discord = require ('discord.js');
+
 module.exports.run = (bot, msg, args) => {
 
     if(args.length>2 || args.length<2) return msg.channel.send(">>> Les variables données ne sont pas correctes \nVous devez donner au moins __une distance__ en SU et __la durée __ en minutes du trajet attendu")
@@ -8,9 +10,19 @@ module.exports.run = (bot, msg, args) => {
     var duree = args[1];
     var retour = (distance *200)/(duree/60)
 
-      var contenu =   `>>> **Vitesse à viser  : ${retour} km/h**`
+      var contenu =   `**Vitesse à viser  : ${retour} km/h**`
 
-    msg.channel.send(contenu)
+      let hEmbed = new Discord.MessageEmbed()
+      .setColor('26a1d1')
+      .setTitle(contenu)
+      .addField(`Distance retenue : `, ` ${distance} SU \n `)
+      .addField(`Temps voulu : `, ` ${duree} Minutes \n `)
+      .setFooter("Overcome vous souhaite une bonne journée")
+      .setTimestamp();
+
+      msg.channel.send(hEmbed);
+
+    //msg.channel.send(contenu)
   }
 
 module.exports.help =  {

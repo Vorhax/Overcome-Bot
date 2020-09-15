@@ -8,12 +8,19 @@ module.exports.run = (bot, msg, args) => {
     var poids = args[1];
     var retour = Math.ceil(distance * poids * 0.00025)
 
-      var contenu =   `>>> **Consomation de  : ${retour.toFixed(0)} Warp Cells**\n__Distance__ : ${distance} SU \n__Poids__ :${poids} Tonnes`
+      var contenu =   `**Consomation de  : ${retour.toFixed(0)} Warp Cells**`
 
+      let hEmbed = new Discord.MessageEmbed()
+      .setColor('26a1d1')
+      .setTitle(contenu)
+      .addField(`Distance retenue : `, ` ${distance} SU \n `)
+      .addField(`Poids retenue : `, ` ${poids} Tonnes \n `)
+      .setFooter("Overcome vous souhaite une bonne journée")
+      .setTimestamp();
 
+      msg.channel.send(hEmbed);
 
-
-    msg.channel.send(contenu)
+    //msg.channel.send(contenu)
   }
 
 module.exports.help =  {
